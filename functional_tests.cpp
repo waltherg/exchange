@@ -17,6 +17,11 @@ SCENARIO( "Sellers can add and remove offers to the exchange.", "[exchange]" ) {
         REQUIRE( exchange.contains( "Item 1" ) );
       }
 
+      THEN( "Bob confirms the price of the item" ) {
+        auto item = exchange.get_item( "Item 1" );
+        REQUIRE( item.price == 100 );
+      }
+
       WHEN( "Seller Bob removes the item" ) {
         exchange.delist( "Item 1" );
 
