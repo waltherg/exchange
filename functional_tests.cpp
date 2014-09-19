@@ -6,7 +6,7 @@
 SCENARIO( "Sellers can add and remove offers to the exchange.", "[exchange]" ) {
 
   GIVEN( "An empty exchange" ) {
-    Exchange exchange();
+    Exchange exchange;
 
     REQUIRE( exchange.length() == 0 );
 

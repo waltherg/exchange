@@ -1,10 +1,18 @@
 #include "exchange.hpp"
 
 
-void exchange::list(std::string item, double price){
+void Exchange::list( std::string item, double price ){
   
 }
 
-bool exchange::contains(std::string item){
+void Exchange::delist( std::string item ) {
+
+}
+
+bool Exchange::contains( std::string item ) {
   return false;
+}
+
+int Exchange::length( ) {
+  return this->items.size();
 }
